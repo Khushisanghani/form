@@ -45,7 +45,6 @@ const handleSubmit = (e) =>{
       {fields.map((field, index) => (
         <Row key={index} className="mb-3">
           <Col md={3}>
-            <Form.Group>
               <Form.Control
                 type="text"
                 name="name"
@@ -53,11 +52,9 @@ const handleSubmit = (e) =>{
                 onChange={(e) => handleChange(index, e)}
                 placeholder="Type Item Name"
               />
-            </Form.Group>
           </Col>
 
-          <Col md={7}>
-            <Form.Group>
+          <Col md={7}> 
               <Form.Control
                 type="text"
                 name="quntity"
@@ -65,7 +62,6 @@ const handleSubmit = (e) =>{
                 onChange={(e) => handleChange(index, e)}
                 placeholder="Type Item Quntity"
               />
-            </Form.Group>
           </Col>
 
           <Col md={2} className="d-flex align-items-end">
