@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { Button, Form, Row, Col, Container } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+
 
 const Content = () => {
-  const navigate = useNavigate();
   const [fields, setFields] = useState([{ name: "", quntity: "" }]);
-  const handleChange = (index, event) => {
+  const handleChange = (index, e) => {
     const newFields = [...fields];
-    newFields[index][event.target.name] = event.target.value;
+    newFields[index][e.target.name] = e.target.value;
     setFields(newFields);
   };
   const addField = () => {
@@ -21,7 +20,6 @@ const Content = () => {
 };
 const handleSubmit = (e) =>{
   e.preventDefault();
-  navigate("/submit");
 }
   return (
    
@@ -65,6 +63,7 @@ const handleSubmit = (e) =>{
           </Col>
 
           <Col md={2} className="d-flex align-items-end">
+          {/* fields.length === 1 */}
             {index === 0 ? (
               <Button variant="primary" onClick={addField}>
                +
