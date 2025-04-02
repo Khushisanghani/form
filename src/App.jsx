@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <Content/>
-      {/* <ReaptFields/> */}
+      <ReaptFields/> 
     </>
   )
 }
